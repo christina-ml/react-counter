@@ -15,9 +15,9 @@ class App extends Component{
     })
   }
 
-  handleDecrement=()=>{
+  handleDecrement=(num)=>{
     this.setState({
-      count: this.state.count -1,
+      count: this.state.count -num,
     })
   }
 
@@ -44,8 +44,9 @@ class App extends Component{
 
         <div className="counter">
           <h1>{ this.state.count }</h1>
+          <button onClick={()=>this.handleDecrement(10)}>-10</button>
+          <button onClick={()=>this.handleDecrement(1)}>-</button>
           <button onClick={()=>this.handleIncrement(1)}>+</button>
-          <button onClick={this.handleDecrement}>-</button>
           <button onClick={()=>this.handleIncrement(10)}>+10</button>
           <button onClick={this.resetCounter}>Reset</button>
         </div>
