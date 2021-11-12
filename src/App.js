@@ -8,28 +8,40 @@ class App extends Component{
     }
   }
 
-  increment=()=>{
+  handleIncrement=()=>{
     this.setState({
       count: this.state.count +1,
+    })
+  }
+
+  resetCounter=()=>{
+    this.setState({
+      count: 0,
     })
   }
 
   render(){
     let count = 0;
 
-    let arr = [ {name: "Gregorio"}, {name: "Kiyomi"} ];
+    let arr = [ {name: "Christina1"}, {name: "Christina2"} ];
     let newArr = arr.map((obj)=>{
-      return obj.name;
+      return obj.name + " ";
     })
 
-    let myEl = <div>This is JSX.</div>;
+    let myEl = <div>Counter App</div>;
 
     return(
       <div>
-        <h1>{ myEl }</h1>
-        <h2>{ newArr }</h2>
-        <h3>{ this.state.count }</h3>
-        <button onClick={this.increment}>Increment</button>
+        <div className="array-el-examples">
+          <h1>{ myEl }</h1>
+          <h4>{ newArr }</h4>
+        </div>
+
+        <div className="counter">
+          <h3>{ this.state.count }</h3>
+          <button onClick={this.handleIncrement}>+</button>
+          <button onClick={this.resetCounter}>Reset</button>
+        </div>
       </div>
     )
   }
