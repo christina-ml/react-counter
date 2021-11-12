@@ -52,6 +52,7 @@ class App extends Component{
 
         <div className="counter">
           <h1>{ this.state.count }</h1>
+          <button onClick={()=>this.handleDecrement(Number(this.state.numInput))}>-Custom</button>
           <button onClick={()=>this.handleDecrement(10)}>-10</button>
           <button onClick={()=>this.handleDecrement(1)}>-</button>
           <button onClick={()=>this.handleIncrement(1)}>+</button>
