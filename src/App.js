@@ -15,7 +15,11 @@ class App extends Component{
   render(){
     let count = 0;
     return(
-      <div>Happy Hacking</div>
+      <div>
+        <h3>{this.state.count}</h3>
+      </div>
     )
   }
 }
+
+export default App;
