@@ -1,7 +1,17 @@
-.App {
+.counter-container {
   text-align: center;
 }
 
 .array-el-examples{
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  background-color: beige;
+}
+
+.counter {
+  /* border: 1px solid green; */
+}
+
+.counter button {
+  padding: 10px;
+  margin: 2px;
 }

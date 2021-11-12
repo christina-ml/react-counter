@@ -1,3 +1,4 @@
+import './App.css';
 const { Component } = require("react");
 
 class App extends Component{
@@ -11,6 +12,12 @@ class App extends Component{
   handleIncrement=()=>{
     this.setState({
       count: this.state.count +1,
+    })
+  }
+
+  handleDecrement=()=>{
+    this.setState({
+      count: this.state.count -1,
     })
   }
 
@@ -29,7 +36,7 @@ class App extends Component{
     let myEl = <div>Counter App</div>;
 
     return(
-      <div>
+      <div className="counter-container">
         <div className="array-el-examples">
           <h1>{ myEl }</h1>
           <h4>{ newArr }</h4>
@@ -38,6 +45,7 @@ class App extends Component{
         <div className="counter">
           <h3>{ this.state.count }</h3>
           <button onClick={this.handleIncrement}>+</button>
+          <button onClick={this.handleDecrement}>-</button>
           <button onClick={this.resetCounter}>Reset</button>
         </div>
       </div>
