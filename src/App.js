@@ -9,7 +9,9 @@ class App extends Component{
   }
 
   increment=()=>{
-
+    this.setState({
+      count: this.state.count +1,
+    })
   }
 
   render(){
@@ -20,11 +22,14 @@ class App extends Component{
       return obj.name;
     })
 
+    let myEl = <div>This is JSX.</div>;
+
     return(
       <div>
+        <h1>{ myEl }</h1>
         <h2>{ newArr }</h2>
         <h3>{ this.state.count }</h3>
-
+        <button onClick={this.increment}>Increment</button>
       </div>
     )
   }
