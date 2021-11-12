@@ -21,6 +21,12 @@ class App extends Component{
     })
   }
 
+  handleIncrementByTen=()=>{
+    this.setState({
+      count: this.state.count +10,
+    })
+  }
+
   resetCounter=()=>{
     this.setState({
       count: 0,
@@ -46,6 +52,7 @@ class App extends Component{
           <h3>{ this.state.count }</h3>
           <button onClick={this.handleIncrement}>+</button>
           <button onClick={this.handleDecrement}>-</button>
+          <button onClick={this.handleIncrementByTen}>+10</button>
           <button onClick={this.resetCounter}>Reset</button>
         </div>
       </div>
