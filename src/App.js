@@ -21,8 +21,6 @@ class App extends Component{
   }
 
   render(){
-    let count = 0;
-
     let arr = [ {name: "Christina1"}, {name: "Christina2"} ];
     let newArr = arr.map((obj)=>{
       return obj.name + " ";
