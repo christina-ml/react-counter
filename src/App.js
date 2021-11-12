@@ -6,6 +6,7 @@ class App extends Component{
     super();
     this.state = {
       count: 0,
+      numInput: '',
     }
   }
 
@@ -24,6 +25,13 @@ class App extends Component{
   resetCounter=()=>{
     this.setState({
       count: 0,
+    })
+  }
+
+  // For the input field - to type in a number
+  handleInput=(event)=>{
+    this.setState({
+      numInput: event.target.value,
     })
   }
 
@@ -48,7 +56,15 @@ class App extends Component{
           <button onClick={()=>this.handleDecrement(1)}>-</button>
           <button onClick={()=>this.handleIncrement(1)}>+</button>
           <button onClick={()=>this.handleIncrement(10)}>+10</button>
+          <button onClick={()=>this.handleIncrement(Number(this.state.numInput))}>+Custom</button>
           <button onClick={this.resetCounter}>Reset</button>
+          <br />
+          <input 
+            type="number" 
+            value={this.state.numInput}
+            onInput={this.handleInput}
+            placeholder="Please type a number"
+          />
         </div>
       </div>
     )
