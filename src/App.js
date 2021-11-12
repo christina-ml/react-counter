@@ -1,12 +1,12 @@
 const { Component } = require("react");
 
 class App extends Component{
-  // constructor(){
-  //   super();
-  //   this.state = {
-  //     count: 0,
-  //   }
-  // }
+  constructor(){
+    super();
+    this.state = {
+      count: 0,
+    }
+  }
 
   increment=()=>{
     
