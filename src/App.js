@@ -9,14 +9,22 @@ class App extends Component{
   }
 
   increment=()=>{
-    
+
   }
 
   render(){
     let count = 0;
+
+    let arr = [ {name: "Gregorio"}, {name: "Kiyomi"} ];
+    let newArr = arr.map((obj)=>{
+      return obj.name;
+    })
+
     return(
       <div>
-        <h3>{this.state.count}</h3>
+        <h2>{ newArr }</h2>
+        <h3>{ this.state.count }</h3>
+
       </div>
     )
   }
